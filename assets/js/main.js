@@ -110,3 +110,51 @@ function blogPosts(arr){
         blogs.appendChild(div);
     }
 }
+const blogForm = document.getElementById("blog-form"); 
+const toggleDisplay = document.getElementById("toggleDisplay"); 
+let display = false; 
+
+toggleDisplay.addEventListener('click',toggle); 
+function toggle(){
+    console.log("Button clicked");
+    if(display){
+        blogForm.classList.add("none");
+        display = !display; 
+    }
+    else{
+        blogForm.classList.remove("none"); 
+        display = !display;
+
+    }
+
+}
+
+const submit = document.getElementById("submit");
+submit.addEventListener('click',onSubmit);
+function onSubmit(e){
+    e.preventDefault(); 
+    fetch("https://rich-pear-piglet-boot.cyclic.app/blogs", {
+     
+    // Adding method type
+    method: "POST",
+     
+    // Adding body or contents to send
+    body: JSON.stringify({
+        title: document.getElementById('title').value,
+        writter: document.getElementById('writter').value,
+        body: document.getElementById('body').value,
+        userId: 1
+    }),
+     
+    // Adding headers to the request
+    headers: {
+        "Content-type": "application/json; charset=UTF-8"
+    }
+})
+ 
+// Converting to JSON
+.then(response => response.json())
+ 
+// Displaying results to console
+.then(json => console.log(json));
+}

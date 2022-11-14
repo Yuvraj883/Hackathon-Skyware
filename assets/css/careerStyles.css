@@ -144,3 +144,57 @@ height: 3em;
 width: 30%;
 margin:2em;
 }
+.write-blog{
+  background:  rgb(12, 77, 52);
+  color:white;
+  padding:1rem; 
+  margin:2rem;
+  font-weight: 900;
+  margin-left: 11rem;
+ 
+  border-radius: 5px;
+    
+}
+.add-blog{
+  margin:auto; 
+  width:80%;
+  background-color: rgb(188, 227, 172);
+  border-radius: 2px;
+  padding:2em;
+
+}
+.add-blog input{
+  border:solid 1px black;
+  margin:auto;
+height:2em; 
+width: 70%; 
+/* margin:1em; */
+display: block;
+}
+.add-blog textarea{
+  width:70%; 
+  height:10em; 
+  margin:auto; 
+  /* text-align: center; */
+  display: block;
+}
+.none{
+  display: none;
+}
+/* Login page */
+
+.loginPage{
+  /* margin-top:40%;  */
+  justify-content: center;
+  align-items: center;
+  display:block;
+}
+.loginPage a{
+  display:block;
+  margin:2rem;
+  width:10em;
+  height: auto;
+  margin:auto;
+  padding: 1em;
+
+}
