@@ -132,3 +132,15 @@ body {
     box-shadow: 10px 5px 5px  rgb(5, 45, 28) ;
     background:  rgb(12, 77, 52);
 }
+.jobs{
+  /* margin-left: 30%;  */
+  padding:auto; 
+  justify-content: center;
+  text-align:center;
+
+}
+.jobs input{
+height: 3em;
+width: 30%;
+margin:2em;
+}
