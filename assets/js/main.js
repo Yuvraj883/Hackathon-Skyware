@@ -99,7 +99,7 @@ let arr = [ {
 
   }]
    fetch("https://rich-pear-piglet-boot.cyclic.app/users").then(res=>{
-    console.log(res.json);
+    console.log(res.json());
    })
 function blogPosts(arr){
 
