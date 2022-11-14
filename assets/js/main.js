@@ -86,7 +86,7 @@ sr.reveal(`.case__data`)
 
 const blogs = document.getElementById("blogs"); 
 
-  fetch('https://rich-pear-piglet-boot.cyclic.app/users')
+  fetch('https://rich-pear-piglet-boot.cyclic.app/blogs')
   .then((response) => response.json())
   .then((data) => {console.log(data);
 
