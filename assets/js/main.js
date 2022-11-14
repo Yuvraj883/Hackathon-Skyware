@@ -98,9 +98,11 @@ let arr = [ {
       "id":"2"
 
   }]
-   fetch("https://rich-pear-piglet-boot.cyclic.app/users").then(res=>{
-    console.log(res.json());
-   })
+  fetch('https://rich-pear-piglet-boot.cyclic.app/users')
+  .then((response) => response.json())
+  .then((data) => {console.log(data);
+
+blogPosts(data)});
 function blogPosts(arr){
 
     for(let i=0; i<arr.length; i++){
@@ -120,4 +122,4 @@ function blogPosts(arr){
         blogs.appendChild(div);
     }
 }
-blogPosts(arr); 
+// blogPosts(arr); 
