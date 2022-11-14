@@ -85,19 +85,7 @@ sr.reveal(`.case__data`)
 
 
 const blogs = document.getElementById("blogs"); 
-let arr = [ {
-    "title":"Maharaja Surajmal Institute of Technology",
-    "body": "Maharaja Surajmal is ranked India's 3rd best private Engineering cllg, only behind IIIT Hyderabad and BITS PILANI, it is situated in New Delhi.",
-    "writter": "Yuvraj Singh",
-    "id":"1"
-  },
-  {
-      "title": "Skyware Automations",
-      "body":"Lorem lipsum lorem lipsum lorem lipsum lorem lipsum",
-      "writter": "Kanishq Singh Vishwa",
-      "id":"2"
 
-  }]
   fetch('https://rich-pear-piglet-boot.cyclic.app/users')
   .then((response) => response.json())
   .then((data) => {console.log(data);
@@ -122,4 +110,3 @@ function blogPosts(arr){
         blogs.appendChild(div);
     }
 }
-// blogPosts(arr); 
