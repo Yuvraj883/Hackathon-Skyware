@@ -148,7 +148,8 @@ function onSubmit(e){
      
     // Adding headers to the request
     headers: {
-        "Content-type": "application/json; charset=UTF-8"
+        "Content-type": "application/json; charset=UTF-8",
+        "mode":"no-cors"
     }
 })
  
