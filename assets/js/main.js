@@ -101,11 +101,14 @@ function blogPosts(arr){
         let div = document.createElement("div"); 
         let h = document.createElement("h1"); 
         let p = document.createElement("p"); 
+        let sub = document.createElement("sub"); 
 
     div.className="post"; 
             h.innerText=title; 
+            sub.innerText =`by ${writter}`;
         p.innerText = body; 
         div.appendChild(h); 
+        div.appendChild(sub);
         div.appendChild(p);
         blogs.appendChild(div);
     }
@@ -129,33 +132,33 @@ function toggle(){
 
 }
 
-const submit = document.getElementById("submit");
-submit.addEventListener('click',onSubmit);
-function onSubmit(e){
-    e.preventDefault(); 
-    fetch("https://rich-pear-piglet-boot.cyclic.app/blogs", {
+// const submit = document.getElementById("submit");
+// submit.addEventListener('click',onSubmit);
+// function onSubmit(e){
+//     e.preventDefault(); 
+//     fetch("https://rich-pear-piglet-boot.cyclic.app/blogs", {
      
-    // Adding method type
-    method: "POST",
+//     // Adding method type
+//     method: "POST",
      
-    // Adding body or contents to send
-    body: JSON.stringify({
-        title: document.getElementById('title').value,
-        writter: document.getElementById('writter').value,
-        body: document.getElementById('body').value,
-        userId: 1
-    }),
+//     // Adding body or contents to send
+//     body: JSON.stringify({
+//         title: document.getElementById('title').value,
+//         writter: document.getElementById('writter').value,
+//         body: document.getElementById('body').value,
+//         userId: 1
+//     }),
      
-    // Adding headers to the request
-    headers: {
-        "Content-type": "application/json; charset=UTF-8",
-        "mode":"no-cors"
-    }
-})
+//     // Adding headers to the request
+//     headers: {
+//         "Content-type": "application/json; charset=UTF-8",
+//         "mode":"no-cors"
+//     }
+// })
  
-// Converting to JSON
-.then(response => response.json())
+// // Converting to JSON
+// .then(response => response.json())
  
-// Displaying results to console
-.then(json => console.log(json));
-}
+// // Displaying results to console
+// .then(json => console.log(json));
+// }
